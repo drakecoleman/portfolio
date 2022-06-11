@@ -9,9 +9,16 @@ import MenuIcon from "@mui/icons-material/Menu";
 
 function Navbar() {
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1, marginBottom: 0 }}>
       <AppBar
-        sx={{ backgroundColor: "rgba(191, 191, 191, 1)" }}
+        className="app"
+        sx={{
+          paddingTop: 0,
+          backgroundColor: "rgba(191, 191, 191, 1)",
+          width: "50%",
+          mx: "auto",
+          marginTop: "10vw",
+        }}
         position="static"
       >
         <Toolbar sx={{ color: "rgba(1, 1, 1, 1)" }}>
@@ -23,10 +30,15 @@ function Navbar() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            A Web Developer's Portfolio
-          </Typography>
-          <Button color="inherit">Contact</Button>
+          <Button className="toolButts" variant="contained">
+            Resume
+          </Button>
+          <Button className="toolButts" variant="contained">
+            Portfolio
+          </Button>
+          <Button className="toolButts" variant="contained">
+            Contact
+          </Button>
         </Toolbar>
       </AppBar>
     </Box>
